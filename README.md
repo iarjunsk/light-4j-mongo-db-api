@@ -7,7 +7,7 @@ java -jar goswift-1.0-SNAPSHOT.jar
 ```
 ## Start server (with mvn)
 ```
-mvn package exec:java
+mvn package exec:exec
 ```
 
 ## Endpoints

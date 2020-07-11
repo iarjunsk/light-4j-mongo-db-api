@@ -17,7 +17,6 @@ public class MongoStartupHookProvider implements StartupHookProvider {
     System.out.println("MongoStartupHookProvider is called");
     initDataSource();
     System.out.println("MongoStartupHookProvider db = " + db);
-
   }
 
   static void initDataSource() {

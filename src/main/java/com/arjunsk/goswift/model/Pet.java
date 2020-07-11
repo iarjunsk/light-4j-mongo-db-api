@@ -1,4 +1,4 @@
-package com.networknt.petstore.model;
+package com.arjunsk.goswift.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 

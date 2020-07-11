@@ -314,6 +314,7 @@
                         <argument>-jar</argument>
                         <argument>target/${project.build.finalName}.jar</argument>
                     </arguments>
+                    <mainClass>com.networknt.server.Server</mainClass>
                 </configuration>
             </plugin>
             <!-- Google error-prone compiles -->

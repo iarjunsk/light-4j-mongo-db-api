@@ -1,4 +1,4 @@
-package com.networknt.petstore.handler;
+package com.arjunsk.goswift.handler;
 
 import com.networknt.handler.LightHttpHandler;
 import io.undertow.server.HttpServerExchange;

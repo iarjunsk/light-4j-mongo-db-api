@@ -1,4 +1,4 @@
-package com.networknt.petstore.handler;
+package com.arjunsk.goswift.handler;
 
 import com.networknt.handler.LightHttpHandler;
 import io.undertow.server.HttpServerExchange;
@@ -6,11 +6,11 @@ import io.undertow.util.HttpString;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PetsGetHandler implements LightHttpHandler {
+public class PetsPetIdDeleteHandler implements LightHttpHandler {
     
     @Override
     public void handleRequest(HttpServerExchange exchange) throws Exception {
         exchange.getResponseHeaders().add(new HttpString("Content-Type"), "application/json");
-        exchange.getResponseSender().send("[{\"id\":1,\"name\":\"catten\",\"tag\":\"cat\"},{\"id\":2,\"name\":\"doggy\",\"tag\":\"dog\"}]");
+        exchange.getResponseSender().send("{\"id\":1,\"name\":\"Jessica Right\",\"tag\":\"pet\"}");
     }
 }

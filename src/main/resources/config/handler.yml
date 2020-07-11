@@ -53,10 +53,10 @@ handlers:
   - com.networknt.specification.SpecSwaggerUIHandler@swaggerui
   # - com.networknt.metrics.prometheus.PrometheusGetHandler@getprometheus
   # Business Handlers
-  - com.networknt.petstore.handler.PetsGetHandler
-  - com.networknt.petstore.handler.PetsPostHandler
-  - com.networknt.petstore.handler.PetsPetIdGetHandler
-  - com.networknt.petstore.handler.PetsPetIdDeleteHandler
+  - com.arjunsk.goswift.handler.PetsGetHandler
+  - com.arjunsk.goswift.handler.PetsPostHandler
+  - com.arjunsk.goswift.handler.PetsPetIdGetHandler
+  - com.arjunsk.goswift.handler.PetsPetIdDeleteHandler
 
 
 chains:
@@ -78,24 +78,24 @@ paths:
     method: 'GET'
     exec:
       - default
-      - com.networknt.petstore.handler.PetsGetHandler
+      - com.arjunsk.goswift.handler.PetsGetHandler
   - path: '/v1/pets'
     method: 'POST'
     exec:
       - default
-      - com.networknt.petstore.handler.PetsPostHandler
+      - com.arjunsk.goswift.handler.PetsPostHandler
   - path: '/v1/pets/{petId}'
     method: 'GET'
     exec:
       - default
-      - com.networknt.petstore.handler.PetsPetIdGetHandler
+      - com.arjunsk.goswift.handler.PetsPetIdGetHandler
   - path: '/v1/pets/{petId}'
     method: 'DELETE'
     exec:
       - default
-      - com.networknt.petstore.handler.PetsPetIdDeleteHandler
+      - com.arjunsk.goswift.handler.PetsPetIdDeleteHandler
 
-  - path: '/health/com.networknt.petstore-3.0.1'
+  - path: '/health/com.arjunsk.goswift-1.0-SNAPSHOT'
     method: 'get'
     exec:
       - health

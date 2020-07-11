@@ -1,4 +1,4 @@
-package com.networknt.petstore.handler;
+package com.arjunsk.goswift.handler;
 
 import com.networknt.handler.LightHttpHandler;
 import io.undertow.server.HttpServerExchange;
@@ -6,7 +6,7 @@ import io.undertow.util.HttpString;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PetsPetIdDeleteHandler implements LightHttpHandler {
+public class PetsPetIdGetHandler implements LightHttpHandler {
     
     @Override
     public void handleRequest(HttpServerExchange exchange) throws Exception {

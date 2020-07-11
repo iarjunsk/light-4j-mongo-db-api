@@ -53,47 +53,35 @@ handlers:
   - com.networknt.specification.SpecSwaggerUIHandler@swaggerui
   # - com.networknt.metrics.prometheus.PrometheusGetHandler@getprometheus
   # Business Handlers
-  - com.arjunsk.goswift.handler.PetsGetHandler
-  - com.arjunsk.goswift.handler.PetsPostHandler
-  - com.arjunsk.goswift.handler.PetsPetIdGetHandler
-  - com.arjunsk.goswift.handler.PetsPetIdDeleteHandler
+  - com.arjunsk.goswift.handler.UsersLoadGetHandler
+  - com.arjunsk.goswift.handler.UsersUserIdGetHandler
 
 
 chains:
   default:
     - exception
-    - metrics
-    - traceability
-    - correlation
-    - specification
-    - security
-    - body
-    - audit
+#    - metrics
+#    - traceability
+#    - correlation
+#    - specification
+#    - security
+#    - body
+#    - audit
 #    - dump
-    - sanitizer
-    - validator
+#    - sanitizer
+#    - validator
 
 paths:
-  - path: '/v1/pets'
+  - path: '/v1/load'
     method: 'GET'
     exec:
       - default
-      - com.arjunsk.goswift.handler.PetsGetHandler
-  - path: '/v1/pets'
-    method: 'POST'
-    exec:
-      - default
-      - com.arjunsk.goswift.handler.PetsPostHandler
-  - path: '/v1/pets/{petId}'
+      - com.arjunsk.goswift.handler.UsersLoadGetHandler
+  - path: '/v1/users/{userId}'
     method: 'GET'
     exec:
       - default
-      - com.arjunsk.goswift.handler.PetsPetIdGetHandler
-  - path: '/v1/pets/{petId}'
-    method: 'DELETE'
-    exec:
-      - default
-      - com.arjunsk.goswift.handler.PetsPetIdDeleteHandler
+      - com.arjunsk.goswift.handler.UsersUserIdGetHandler
 
   - path: '/health/com.arjunsk.goswift-1.0-SNAPSHOT'
     method: 'get'

@@ -1,22 +1,32 @@
 package com.arjunsk.goswift.handler;
 
 import com.arjunsk.goswift.db.MongoStartupHookProvider;
-import com.networknt.handler.LightHttpHandler;
+import com.arjunsk.goswift.model.User;
+import com.mongodb.client.model.Filters;
+import com.networknt.config.Config;
+import io.undertow.server.HttpHandler;
 import io.undertow.server.HttpServerExchange;
 import io.undertow.util.HttpString;
+import lombok.extern.slf4j.Slf4j;
 
-public class UsersUserIdGetHandler implements LightHttpHandler {
+@Slf4j
+public class UsersUserIdGetHandler implements HttpHandler {
 
   @Override
   public void handleRequest(HttpServerExchange exchange) throws Exception {
 
-    MongoStartupHookProvider.db.createCollection("users");
-    MongoStartupHookProvider.db.getCollection("users").insertOne(null);
+    // NOTE: Getting Path Param
+    String userId = exchange.getQueryParameters().get("userId").getFirst();
 
     exchange.getResponseHeaders().add(new HttpString("Content-Type"), "application/json");
-    exchange
-        .getResponseSender()
-        .send(
-            "[{\"id\":1,\"name\":\"catten\",\"tag\":\"cat\"},{\"id\":2,\"name\":\"doggy\",\"tag\":\"dog\"}]");
+    User user =
+        MongoStartupHookProvider.db
+            .getCollection("users", User.class)
+            .find(Filters.eq("_id", userId))
+            .first();
+
+    // NOTE: Sending JSON String
+    String result = Config.getInstance().getMapper().writeValueAsString(user);
+    exchange.getResponseSender().send(result);
   }
 }

@@ -1,9 +1,0 @@
-enabled: true
-allowedOrigins:
-- https://localhost
-- http://arjunsk.com/
-allowedMethods:
-- GET
-- POST
-- PUT
-- DELETE

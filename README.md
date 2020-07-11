@@ -7,7 +7,7 @@ java -jar goswift-1.0-SNAPSHOT.jar
 ```
 ## Start server (with mvn)
 ```
-mvn package exec:exec
+mvn package exec:java
 ```
 
 ## Endpoints
@@ -17,14 +17,14 @@ https://localhost:8443/v1/pets
 http://localhost:8080/v1/pets
 ```
 
-2. Health Check
+2. Health Check (1.5x)
 https://localhost:8443/health/com.arjunsk.goswift-1.0-SNAPSHOT
 
-3. OAS3 
+3. OAS3 (1.5x)
 https://localhost:8443/spec.yaml
 
-4. Swagger UI
+4. Swagger UI (1.5x)
 https://localhost:8443/specui.html
 
-5. Info
+5. Info (1.5x)
 https://localhost:8443/server/info

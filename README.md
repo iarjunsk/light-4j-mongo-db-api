@@ -28,3 +28,15 @@ https://localhost:8443/specui.html
 
 5. Info (1.5x)
 https://localhost:8443/server/info
+
+
+## Done
+1. Connected to Mongo and retrieved data.
+2. Ran with proper logging config.
+3. Implemented all the endpoint.
+
+## TODO
+1. Error handling
+2. Running in debug mode
+3. Upgrade to 1.6x
+4. Dynamic Content Loading using Json Placeholder

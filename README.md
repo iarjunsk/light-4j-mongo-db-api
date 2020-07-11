@@ -31,12 +31,13 @@ https://localhost:8443/server/info
 
 
 ## Done
-1. Connected to Mongo and retrieved data.
+1. MongoDB connectivity established.
 2. Ran with proper logging config.
 3. Implemented all the endpoint.
+4. Proper Status codes.
 
 ## TODO
-1. Error handling
-2. Running in debug mode
-3. Upgrade to 1.6x
-4. Dynamic Content Loading using Json Placeholder
+1. Error handling.
+2. Running in debug mode.
+3. Upgrade to 1.6x.
+4. Dynamic Content Loading using Json Placeholder.

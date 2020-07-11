@@ -16,6 +16,7 @@ public class UsersLoadGetHandler implements HttpHandler {
   @Override
   public void handleRequest(HttpServerExchange exchange) throws Exception {
 
+    // Static Content Loading
     List<User> users = new ArrayList<>();
     users.add(new User(UUID.randomUUID().toString(), "Arjun SK", "arjunsk15@gmail.com"));
     users.add(new User(UUID.randomUUID().toString(), "Admin", "admin@arjunsk.com"));

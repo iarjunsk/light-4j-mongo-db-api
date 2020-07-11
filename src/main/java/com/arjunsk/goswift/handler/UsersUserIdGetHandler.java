@@ -1,5 +1,6 @@
 package com.arjunsk.goswift.handler;
 
+import com.arjunsk.goswift.db.MongoStartupHookProvider;
 import com.networknt.handler.LightHttpHandler;
 import io.undertow.server.HttpServerExchange;
 import io.undertow.util.HttpString;
@@ -8,6 +9,10 @@ public class UsersUserIdGetHandler implements LightHttpHandler {
 
   @Override
   public void handleRequest(HttpServerExchange exchange) throws Exception {
+
+    MongoStartupHookProvider.db.createCollection("users");
+    MongoStartupHookProvider.db.getCollection("users").insertOne(null);
+
     exchange.getResponseHeaders().add(new HttpString("Content-Type"), "application/json");
     exchange
         .getResponseSender()

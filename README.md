@@ -10,8 +10,8 @@ java -jar goswift-1.0-SNAPSHOT.jar
 mvn clean install exec:java
 ```
 
-## Test server
-1. Endpoint
+## Endpoints
+1. Dummy
 https://localhost:8443/v1/pets 
 
 2. Health Check

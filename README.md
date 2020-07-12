@@ -35,6 +35,7 @@ https://localhost:8443/server/info
 2. Ran with proper logging config.
 3. Implemented all the endpoint.
 4. Proper Status codes.
+5. Postman Collection for testing.
 
 ## TODO
 1. Error handling.

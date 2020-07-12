@@ -40,8 +40,8 @@ https://localhost:8443/server/info
 ## TODO
 1. Error handling.
 2. Dynamic Content Loading using Json Placeholder.
-3. Java Docs.
 
-## TRY OUT
-1. Running in debug mode.
-2. Upgrade to 1.6x.
+## GOOD TO HAVE
+1. Java Docs.
+2. Running in debug mode.
+3. Upgrade to 1.6x.

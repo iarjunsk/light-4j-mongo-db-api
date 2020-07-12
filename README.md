@@ -38,6 +38,8 @@ https://localhost:8443/server/info
 
 ## TODO
 1. Error handling.
-2. Running in debug mode.
-3. Upgrade to 1.6x.
-4. Dynamic Content Loading using Json Placeholder.
+2. Dynamic Content Loading using Json Placeholder.
+
+## TRY OUT
+1. Running in debug mode.
+2. Upgrade to 1.6x.

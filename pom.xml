@@ -38,7 +38,7 @@
         <version.httpclient>4.5.2</version.httpclient>
         <version.httpasyncclient>4.1.2</version.httpasyncclient>
         <version.swagger>1.5.10</version.swagger>
-        <version.mongo>3.12.6</version.mongo>
+        <version.mongo>3.12.8</version.mongo>
         <lombok.version>1.18.12</lombok.version>
     </properties>
 
